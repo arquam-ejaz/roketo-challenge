@@ -13,10 +13,10 @@
     "parcel-bundler": "~1.12.4"
   },
   "dependencies": {
-    "big.js": "^6.1.1",
-    "bn.js": "^5.2.0",
     "near-api-js": "~0.43.1",
-    "regenerator-runtime": "~0.13.5"
+    "regenerator-runtime": "~0.13.5",
+    "big.js": "^6.1.1",
+    "bn.js": "^5.2.0"
   },
   "jest": {
     "testEnvironment": "near-cli/test_environment",
