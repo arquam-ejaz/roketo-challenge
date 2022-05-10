@@ -20,7 +20,7 @@ async function getBalance() {
     account_id: window.accountId
   }).then((value) => {
     value = utils.format.formatNearAmount(value)
-    document.getElementById('wNEAR').innerHTML += value + ' <span title="NEAR Tokens" style="display: inline-block; color: black;">Ⓝ</span>'
+    document.getElementById('wNEAR').innerHTML += '<b>'+ value + '</b>'
   })
 }
 
@@ -30,9 +30,9 @@ async function getStreamDetails() {
   await window.roketo_contract.get_account({
     "account_id": window.accountId
   }).then((details) => {
-    document.getElementById('outgoing-streams').innerHTML += details['active_outgoing_streams']
-    document.getElementById('incoming-streams').innerHTML += details['active_incoming_streams']
-    document.getElementById('last-stream').innerHTML += details['last_created_stream']
+    document.getElementById('outgoing-streams').innerHTML += '<b>'+ details['active_outgoing_streams'] + '</b>'
+    document.getElementById('incoming-streams').innerHTML += '<b>'+ details['active_incoming_streams'] + '</b>'
+    document.getElementById('last-stream').innerHTML += '<b>'+ details['last_created_stream'] + '</b>'
   })
 
 }

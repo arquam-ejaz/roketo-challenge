@@ -18558,7 +18558,7 @@ function _getBalance() {
               account_id: window.accountId
             }).then(function (value) {
               value = _nearApiJs.utils.format.formatNearAmount(value);
-              document.getElementById('wNEAR').innerHTML += value + ' <span title="NEAR Tokens" style="display: inline-block; color: black;">Ⓝ</span>';
+              document.getElementById('wNEAR').innerHTML += '<b>' + value + '</b>';
             });
 
           case 2:
@@ -18630,9 +18630,9 @@ function _getStreamDetails() {
             return window.roketo_contract.get_account({
               "account_id": window.accountId
             }).then(function (details) {
-              document.getElementById('outgoing-streams').innerHTML += details['active_outgoing_streams'];
-              document.getElementById('incoming-streams').innerHTML += details['active_incoming_streams'];
-              document.getElementById('last-stream').innerHTML += details['last_created_stream'];
+              document.getElementById('outgoing-streams').innerHTML += '<b>' + details['active_outgoing_streams'] + '</b>';
+              document.getElementById('incoming-streams').innerHTML += '<b>' + details['active_incoming_streams'] + '</b>';
+              document.getElementById('last-stream').innerHTML += '<b>' + details['last_created_stream'] + '</b>';
             });
 
           case 2:
@@ -18812,7 +18812,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34293" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41035" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
